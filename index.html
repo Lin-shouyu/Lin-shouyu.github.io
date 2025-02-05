@@ -12,36 +12,79 @@
       padding: 20px;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       background: #fff;
       padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    h1, h2 {
-      color: #333;
+    h1 {
+      color: #fff;
+      background-color: #2c3e50;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 5px;
     }
     ul {
-      list-style: disc inside;
-      padding-left: 20px;
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #ecf0f1;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 5px;
     }
     .section {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+    }
+    .leetcode-container {
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .leetcode-container a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #2980b9;
+      font-size: 18px;
+    }
+    .leetcode-container a:hover {
+      text-decoration: underline;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>自我介紹</h1>
+
     <div class="section">
-      <p>大家好，我是一位來自中興大學的碩士生，目前研究的方向為 <strong>量子密碼學</strong>。我對於資訊科學充滿熱情，並且積極探索前沿技術。</p>
+      <p>大家好，我是一位來自 <strong>中興大學</strong> 的碩士生 <strong>林守昱</strong>，研究的方向為 <strong>量子密碼學</strong>。同時對於AI也具備一定知識。</p>
     </div>
 
     <div class="section">
       <h2>修習課程</h2>
       <ul>
         <li>電腦視覺 (Computer Vision)</li>
+        <li>數位影像處理 (Digital Image Processing)</li>
         <li>自然語言處理 (Natural Languages Processing)</li>
         <li>密碼學 (Cryptography)</li>
         <li>資訊檢索 (Advanced Topics in Information Retrieval)</li>
@@ -65,12 +108,14 @@
         <li>Docker</li>
       </ul>
     </div>
-  </div>
-  <div class="section">
-    <h2>LeetCode</h2>
-    <p>前往我的 <a href="https://leetcode.com/justnoob" target="_blank" rel="noopener noreferrer">LeetCode 個人頁面</a></p>
-    <h2>圖片展示</h2>
-    <img src="img/leetcode.png" alt="LeetCode" width="400">
+
+    <div class="leetcode-container">
+      <h2>LeetCode</h2>
+      <p>前往我的 <a href="https://leetcode.com/justnoob" target="_blank" rel="noopener noreferrer">LeetCode 個人頁面</a></p>
+      <div class="image-container">
+        <img src="img/leetcode.png" alt="LeetCode 頁面">
+      </div>
+    </div>
   </div>
 </body>
 </html>

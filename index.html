@@ -1,121 +1,260 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>自我介紹 - 中興大學碩士生</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>林守昱 - 個人履歷</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+    /* Reset */
+    * {
       margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      color: #fff;
-      background-color: #2c3e50;
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
-    }
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #2c3e50;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style: none;
       padding: 0;
+      box-sizing: border-box;
     }
-    ul li {
-      background: #ecf0f1;
-      margin: 5px 0;
-      padding: 8px;
-      border-radius: 5px;
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #f7f9fa;
+      color: #333;
+      line-height: 1.6;
     }
-    .section {
-      margin-bottom: 30px;
-    }
-    .leetcode-container {
-      background: #ecf0f1;
-      padding: 15px;
-      border-radius: 8px;
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 30px;
       text-align: center;
     }
-    .leetcode-container a {
-      font-weight: bold;
-      text-decoration: none;
-      color: #2980b9;
-      font-size: 18px;
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
-    .leetcode-container a:hover {
-      text-decoration: underline;
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
     }
-    .image-container {
+
+    .resume-container {
       display: flex;
-      justify-content: center;
-      margin-top: 15px;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      gap: 20px;
     }
-    img {
-      max-width: 100%;
-      height: auto;
+
+    /* 左側欄：聯絡資訊、技能清單等 */
+    .sidebar {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      min-width: 250px;
+      max-width: 300px;
+      height: fit-content;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .contact-info, .skills, .extra-info {
+      margin-bottom: 25px;
+    }
+
+    .contact-info ul, .skills ul, .extra-info ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .contact-info li, .skills li, .extra-info li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .skills li {
+      padding-left: 10px;
+      position: relative;
+    }
+    .skills li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2c3e50;
+    }
+
+    /* 右側欄：主要內容 */
+    .main-content {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .section p {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .projects, .education {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .project-item, .edu-item {
+      margin-bottom: 10px;
+    }
+
+    .project-item h3, .edu-item h3 {
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+      color: #2c3e50;
+    }
+    .project-item p, .edu-item p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2c3e50;
+      color: #fff;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .resume-container {
+        flex-direction: column;
+        padding: 10px;
+      }
+      .sidebar, .main-content {
+        width: 100%;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>自我介紹</h1>
 
-    <div class="section">
-      <p>大家好，我是一位來自 <strong>中興大學</strong> 的碩士生 <strong>林守昱</strong>，研究的方向為 <strong>量子密碼學</strong>。同時對於AI也具備一定知識。</p>
-    </div>
+  <header>
+    <h1>林守昱</h1>
+    <p>中興大學碩士生 | 研究方向：量子密碼學、AI 技術</p>
+  </header>
 
-    <div class="section">
-      <h2>修習課程</h2>
-      <ul>
-        <li>電腦視覺 (Computer Vision)</li>
-        <li>數位影像處理 (Digital Image Processing)</li>
-        <li>自然語言處理 (Natural Languages Processing)</li>
-        <li>密碼學 (Cryptography)</li>
-        <li>資訊檢索 (Information Retrieval)</li>
-        <li>高等資料探勘與巨量資料分析 (Advanced Data Mining and Big Data Analysis)</li>
-      </ul>
-    </div>
+  <div class="resume-container">
 
-    <div class="section">
-      <h2>程式語言</h2>
-      <ul>
-        <li>C++</li>
-        <li>Java</li>
-        <li>Python</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>工具</h2>
-      <ul>
-        <li>Hadoop</li>
-        <li>Docker</li>
-      </ul>
-    </div>
-
-    <div class="leetcode-container">
-      <h2>LeetCode</h2>
-      <p>前往我的 <a href="https://leetcode.com/justnoob" target="_blank" rel="noopener noreferrer">LeetCode 個人頁面</a></p>
-      <div class="image-container">
-        <img src="img/leetcode.png" alt="LeetCode 頁面">
+    <!-- 左側欄 -->
+    <aside class="sidebar">
+      <!-- 聯絡資訊 -->
+      <div class="contact-info">
+        <h2>聯絡資訊</h2>
+        <ul>
+          <li>電話: 0987-xxxxxx</li>
+          <li>Email: <a href="mailto:a9610330@gmail.com">a9610330@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/Lin-shouyu" target="_blank">github.com/Lin-shouyu</a></li>
+        </ul>
       </div>
-    </div>
+
+      <!-- 技能清單 -->
+      <div class="skills">
+        <h2>技能</h2>
+        <ul>
+          <li>C/C++</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>FastAPI</li>
+          <li>Docker</li>
+          <li>Hadoop</li>
+          <li>OOP</li>
+        </ul>
+      </div>
+
+      <!-- 額外資訊 (如語言能力、LeetCode、興趣等) -->
+      <div class="extra-info">
+        <h2>其他</h2>
+        <ul>
+          <li>LeetCode：200+ 題</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- 右側欄 -->
+    <main class="main-content">
+
+      <!-- 個人簡介 -->
+      <section class="section profile">
+        <h2>自我介紹</h2>
+        <p>
+          我是一位對新技術充滿熱情的工程師，積極參與各種技術競賽與活動來拓展實戰經驗。  
+          擔任過課程助教並協助專題生研究，強化了我的技術溝通與問題解決能力。  
+          目前在中興大學進行量子密碼學研究，致力於利用量子特性來對抗量子電腦對古典加密系統可能帶來的威脅。
+        </p>
+      </section>
+
+      <!-- 競賽 & 專案經驗 -->
+      <section class="section projects">
+        <h2>競賽 & 專案經驗</h2>
+
+        <div class="project-item">
+          <h3>TSMC IT CareerHack 2025</h3>
+          <p>
+            <strong>3rd Place | AI Development Toolkit (AI維運懶人包)</strong><br/>
+            - Developed a project integrating AI into the CI/CD workflow, streamlining automation and deployment.<br/>
+            - Backend: FastAPI, OpenAI API
+          </p>
+        </div>
+
+        <div class="project-item">
+          <h3>TSMC IT CareerHack</h3>
+          <p>
+            <strong>Facility Knowledge Bot (廠務知識機器人)</strong><br/>
+            - Developed a Discord bot for automating knowledge retrieval and improving facility management efficiency.<br/>
+            - Implemented LangChain for natural language processing and intelligent query handling.<br/>
+            - Backend: FastAPI, LangChain, Discord API
+          </p>
+        </div>
+
+        <div class="project-item">
+          <h3>Undergraduate Capstone Project</h3>
+          <p>
+            <strong>Physical Conflict Detection System (肢體衝突偵測)</strong><br/>
+            - Built a real-time AI-based system to detect physical conflicts using video surveillance.<br/>
+            - Employed computer vision and deep learning models (OpenCV, TensorFlow/PyTorch) to analyze human behavior.
+          </p>
+        </div>
+      </section>
+
+      <!-- 教育背景 -->
+      <section class="section education">
+        <h2>教育背景</h2>
+        <div class="edu-item">
+          <h3>國立中興大學</h3>
+          <p>
+            碩士班 (量子密碼學) | <em>研究重點：量子特性加密資訊</em><br/>
+            預計畢業：2025 年
+          </p>
+        </div>
+      </section>
+
+    </main>
   </div>
+
+  <footer>
+    <p>&copy; 2025 林守昱. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
